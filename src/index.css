@@ -1,0 +1,61 @@
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar a {
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: lightgrey;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.home-landing {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    /*   background-image: url("./images/signed-out-home.jpg"); */
+    text-align: center;
+    padding: 1rem;
+    background-position: center center;
+    background-size: cover;
+    text-shadow: 0 0 8px #66757f;
+}
+
+.formContent {
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: lightblue;
+    text-emphasis-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+    background: #fafafa grey lighten-5;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: .5;
+    /* Firefox */
+}
+
+
+/* .navbar-brand {
+    display: inline-block;
+    width: 20px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    border-radius: 2px;
+} */

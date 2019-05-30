@@ -9,7 +9,7 @@ export const loadItems = items => ({
 
 export const fetchItems = () => {
   return dispatch => {
-    return apiCall("GET", "/api/latest")
+    return apiCall("get", "/api/latest")
       .then(res => {
         dispatch(loadItems(res));
       })

@@ -1,4 +1,5 @@
 import React from "react";
+import BasicCard from '../BasicCard';
 
 const cardImageStyle = {
     height: "200px",

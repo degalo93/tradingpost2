@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import BasicCard from "./BasicCard";
 import { Container, Row, Col } from "../components/Grid";
 
-const Homepage = () => (
-  <div className="home-landing">
+const Homepage = ({currentUser}) => {
+ 
+  if(!currentUser.isAuthenticated) { 
+    return (
+      <div className="home-landing">
     <h2>Trading Post</h2>
     <Container>
       <Row>
@@ -43,14 +46,18 @@ const Homepage = () => (
           </BasicCard>
         </Col>
       </Row>
-      <Link to="/signup" className="btn btn-primary">
-        Sign up here
-      </Link>
-      <Link to="/trading-post" className="btn btn-primary">
+      <Link to="/search" className="btn btn-primary">
       Enter Site
       </Link>
     </Container>
   </div>
-);
+      );
+    } 
+    return (
+      <div>
+        <h1>YOU MADE IT!</h1>
+      </div>
+    );
+};
 
 export default Homepage;

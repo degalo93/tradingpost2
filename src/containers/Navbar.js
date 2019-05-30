@@ -1,21 +1,35 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { logout } from "../store/actions/auth";
 
 
 class Navbar extends Component {
-
+  logout = e => {
+    e.preventDefault();
+    this.props.logout();
+  };
 
   render() {
       
     return (
+      <div>
       <nav className="nav-wrapper cyan darken-3">
-        <div className="container">
-          <div className="navbar">
-            <Link to="/" className="navbar-brand">
+             <Link to="/" className="brand-logo">
               <img src=" " alt="Trading-Post" />
             </Link>
-         
+            {this.props.currentUser.isAuthenticated ? (
+            <ul className="right">
+              <li>
+                <Link to={`/api/users/${this.props.currentUser.user._id}`}>
+                  Your Profile
+                </Link>
+              </li>
+              <li>
+                <a onClick={this.logout}>Log out</a>
+              </li>
+            </ul>
+          ) : (
           <ul className="right">
             <li>
               <Link to="/signup">Sign up</Link>
@@ -24,18 +38,9 @@ class Navbar extends Component {
               <Link to="/signin">Log in</Link>
             </li>
           </ul>
-          </div>
-     {/*      <ul className = "sidenav grey darken-3"> 
-          <li>
-              <Link to="/signup">Sign up</Link>
-            </li>
-            <li>
-              <Link to="/signin">Log in</Link>
-            </li>
-          </ul> */}
-         
-        </div>
+          )}
       </nav>
+      </div>
     );
  }
 }
@@ -46,4 +51,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);

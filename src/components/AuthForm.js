@@ -38,9 +38,11 @@ import PropTypes from "prop-types";
  render(){
     const { firstName, lastName,  userName, email, password , passwordConfirm, phone, city, state, description, profilePic } = this.state;
     const {signUp, heading, buttonText, errors,history, removeError} = this.props; 
+
     history.listen(() => {
         removeError();
       });
+      
     return (
         <div className="container formContent">
             <form onSubmit= {this.handleSubmit}>

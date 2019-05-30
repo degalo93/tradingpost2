@@ -24,10 +24,10 @@
 
     /* justify-content: center; */
     z-index: -1;
-    /*   background-image: url("./images/signed-out-home.jpg"); */
+    /* background-image: url("%PUBLIC_URL%/placeholder.jpg"); */
     text-align: center;
     padding: 1rem;
-    margin: 2rem;
+    margin: 1.5rem;
     background-position: center center;
     background-size: cover;
     text-shadow: 0 0 8px #66757f;
@@ -48,6 +48,18 @@
 
 .cardContent {
     padding: 1.5rem;
+}
+
+.card {
+    background-color: #00bfa65d;
+}
+
+.homeCard {
+    height: 165px;
+}
+
+.btn {
+    margin: 5px;
 }
 
 body {

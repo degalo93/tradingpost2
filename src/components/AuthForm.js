@@ -37,7 +37,7 @@ import PropTypes from "prop-types";
   };
  render(){
     const { firstName, lastName,  userName, email, password , passwordConfirm, phone, city, state, description, profilePic } = this.state;
-    const {signUp, heading, buttonText, errors,history, removeError} = this.props; 
+    const {signUp, heading, buttonText, errors, history, removeError} = this.props; 
     history.listen(() => {
         removeError();
       });
@@ -47,7 +47,7 @@ import PropTypes from "prop-types";
             <h2>{heading}</h2>
             
               {errors.message && (
-                <div className="alert alert-danger">{errors.message}</div>
+                <div className="alert">{errors.message}</div>
               )}
 
                <div className="row">

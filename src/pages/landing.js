@@ -58,7 +58,7 @@ class Landing extends Component {
   render() {
     return (
 
-      <div className="container">
+      <div>
         <div>
           <form className="search">
             <div className="row">
@@ -86,7 +86,8 @@ class Landing extends Component {
             items={this.state.returnedItems} />
           {/*  <Postform></Postform>  */}
         </div>
-      </div>
+        </div>
+     
     )
   }
 

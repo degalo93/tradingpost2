@@ -8,6 +8,7 @@ import item from "./pages/item"
 import Nav from "./components/Nav";
 import signin from "./pages/signin";
 import signup from "./pages/signup";
+import Welcome from "./pages/welcome";
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
@@ -46,6 +47,7 @@ class App extends Component {
         <div>
           <Nav isLoggedIn={this.state.isLoggedIn} />
           <Switch>
+            <Route exact path="/" component={Welcome} />
             <Route exact path="/trading-post/" component={landing} />
             <Route exact path="/trading-post/signin" component={signin} />
             <Route exact path="/trading-post/signup" component={signup} />

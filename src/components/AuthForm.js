@@ -49,7 +49,7 @@ import PropTypes from "prop-types";
             <h2>{heading}</h2>
             
               {errors.message && (
-                <div className="alert alert-danger">{errors.message}</div>
+                <div> <p className="red-text">Error: {errors.message}</p></div>
               )}
 
                <div className="row">

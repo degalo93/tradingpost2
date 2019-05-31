@@ -38,7 +38,7 @@ class Profile extends Component {
     }
 
     renderRedirect = () => {
-        let path = '/trading-post/postitem/' + this.state._id;
+        let path = '/postitem/' + this.state._id;
         if (this.state.redirect) {
             return <Redirect to={path} />
         }
@@ -102,7 +102,7 @@ class Profile extends Component {
 
     routeChangeAddItem = () => {
         console.log("id " + this.state._id);
-        this.props.history.push("/trading-post/postitem/" + this.state._id);
+        this.props.history.push("/postitem/" + this.state._id);
     }
 
     render() {

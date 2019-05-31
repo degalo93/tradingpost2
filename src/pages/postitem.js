@@ -53,9 +53,10 @@ class PostItem extends Component {
     console.log(this.state.selectedCategory);
 
     API.createNewItem(
-      sessionStorage.getItem("UserId"),
+     /*  sessionStorage.getItem("UserId"), */
+      this.state._owner,
       {
-        _owner: sessionStorage.getItem("UserId"),
+        _owner: this.state._owner,
         title: this.state.title,
         picture: this.state.picture.length === 0 ? "https://www.pluggedin.com/images/content-image/placeholder_book.jpg" : this.state.picture,
         description: this.state.description,
@@ -63,7 +64,7 @@ class PostItem extends Component {
         condition: this.state.condition
       }).then(res => {
         console.log("The item was posted " + res.data);
-        let path = "/trading-post/profile/" + this.state._owner;
+        let path = "/profile/" + this.state._owner;
         this.props.history.push(path);
 
 

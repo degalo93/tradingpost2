@@ -23,7 +23,9 @@ export default {
     //post request for the create a new item
     createNewItem: function (userId, postData) {
         console.log(postData);
-        return axios.post(`https://trading-post-server.herokuapp.com/api/items/${userId}`, postData)
+        return axios.post(`https://tradingpost-server-hz.herokuapp.com/api/items/${userId}`, postData)
+        /* return axios.post(`https://trading-post-server.herokuapp.com/api/items/${userId}`, postData) */
+
         /* example
         {	
         "_owner": "5cc8da15ce98f8f39fccd613",

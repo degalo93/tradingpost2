@@ -6,6 +6,7 @@ import AuthForm from "../components/AuthForm";
 import { authUser } from "../store/actions/auth"; 
 import { removeError } from "../store/actions/errors";
 import Landing from "../pages/landing";
+import Profile from "../pages/profile";
  
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props; 
@@ -14,6 +15,7 @@ const Main = props => {
       <Switch>
         <Route exact path="/" render={props => <Homepage currentUser={currentUser} {...props} />} />
         <Route exact path="/search" component={Landing} />
+        <Route path="/profile/:id" component={Profile} />
          <Route
           exact
           path="/signin"

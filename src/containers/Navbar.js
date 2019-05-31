@@ -21,7 +21,8 @@ class Navbar extends Component {
             {this.props.currentUser.isAuthenticated ? (
             <ul className="right">
               <li>
-                <Link to={`/api/users/${this.props.currentUser.user._id}`}>
+               {/*  <Link to={`/api/users/${this.props.currentUser.user._id}`}> */}
+               <Link to={`/profile/${this.props.currentUser.user._id}`}>
                   Your Profile
                 </Link>
               </li>

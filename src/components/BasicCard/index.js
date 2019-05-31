@@ -4,7 +4,7 @@ function BasicCard(props) {
   const classes = `card z-depth-4 ${props.classes}`
   return (
       <div className={classes}>
-          <div className="cardContent">{props.children}</div>
+          <div>{props.children}</div>
           </div>
   );
 }

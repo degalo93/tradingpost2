@@ -1,9 +1,10 @@
 import React from "react";
 
 function BasicCard(props) {
+  const classes = `card z-depth-4 ${props.classes}`
   return (
-      <div className="card z-depth-4">
-          <div className="cardContent">{props.children}</div>
+      <div className={classes}>
+          <div>{props.children}</div>
           </div>
   );
 }

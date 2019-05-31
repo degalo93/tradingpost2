@@ -23,7 +23,8 @@ function NavBar(props) {
                     {/* <li><a href="/trading-post"><img src={require('../../logo_trans.gif')} style={{ 'margin-bottom': '-10px', 'margin-right': '7px' }}></img>Home</a></li>
                     {sessionStorage.getItem("UserId") ? <li><a href={"/trading-post/profile/" + sessionStorage.getItem("UserId")} >Profile</a></li> : console.log("not logged in")} */}
                     <li><Link to="/trading-post">Home</Link></li>
-                    {sessionStorage.getItem("UserId") ? <li><Link to={"/trading-post/profile/" + sessionStorage.getItem("UserId")}>Profile</Link></li> : console.log("not logged in")}
+                    {sessionStorage.getItem("UserId") ? <li><i className="material-icons prefix">account_circle</i> <Link to={"/trading-post/profile/" + sessionStorage.getItem("UserId")}>
+                    Profile</Link></li> : console.log("not logged in")}
                 </ul>
 
                 <ul className="right hide-on-med-and-down">

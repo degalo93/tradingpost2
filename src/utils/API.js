@@ -17,7 +17,8 @@ export default {
 
     // http://fathomless-sands-76947.herokuapp.com/
     getRecentItems: function () {
-        return axios.get("https://trading-post-server.herokuapp.com/api/items/dateDown")
+        /* return axios.get("https://trading-post-server.herokuapp.com/api/items/dateDown") */
+        return axios.get("https://tradingpost-server-hz.herokuapp.com/api/latest")
     },
     //post request for the create a new item
     createNewItem: function (userId, postData) {
@@ -41,13 +42,15 @@ export default {
     },
 
     getUserInfo: function (userid) {
-        return axios.get("https://trading-post-server.herokuapp.com/api/users/" + userid)
+       /*  return axios.get("https://trading-post-server.herokuapp.com/api/users/" + userid) */
+       return axios.get("https://tradingpost-server-hz.herokuapp.com/api/users/" + userid)
     },
     //get request to receive items based on the category and the search term
     getSearchedItems: function (category, searchTerm) {
         console.log("category: " + category);
         console.log("searchTerm: " + searchTerm);
-        return axios.get("https://trading-post-server.herokuapp.com/api/categories/" + category + "/" + searchTerm)
+       /*  return axios.get("https://trading-post-server.herokuapp.com/api/categories/" + category + "/" + searchTerm) */
+       return axios.get("https://tradingpost-server-hz.herokuapp.com/api/search/" + category + "/" + searchTerm)
     },
     //create a new user (post method for signing up)
     /*

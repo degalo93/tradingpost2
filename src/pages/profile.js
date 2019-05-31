@@ -108,7 +108,7 @@ class Profile extends Component {
     render() {
         console.log(this.state)
 
-        if (sessionStorage.getItem("UserId")) {
+        /* if (sessionStorage.getItem("UserId")) { */
             return (
                 <div>
 
@@ -149,11 +149,11 @@ class Profile extends Component {
                     </Row>
                 </div>
             )
-        } else {
+       /*  } else {
             return (
                 <Redirect to="/trading-post"></Redirect>
             )
-        }
+        } */
 
 
     }

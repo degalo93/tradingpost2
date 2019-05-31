@@ -54,7 +54,7 @@ import PropTypes from "prop-types";
 
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">email</i>
+                     <i className="material-icons prefix">email</i>
                      <input
                         autoComplete="off"
                         value={email}
@@ -68,7 +68,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">security</i>
+                     <i className="material-icons prefix">security</i>
                      <input
                         autoComplete="off"
                         value={password}
@@ -85,7 +85,7 @@ import PropTypes from "prop-types";
                     <div>
                   <div className= "row">
                   <div className=" input-field col s12">
-                  <i class="material-icons prefix">security</i>
+                  <i className="material-icons prefix">security</i>
                      <input
                         autoComplete="off"
                         value={passwordConfirm}
@@ -99,7 +99,7 @@ import PropTypes from "prop-types";
                </div>
                 <div className="row">
               <div className="input-field col s6">
-                     <i class="material-icons prefix">person</i>
+                     <i className="material-icons prefix">person</i>
                      <input
                         autoComplete="off"
                         id = "firstName"
@@ -124,7 +124,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">account_circle</i>
+                     <i className="material-icons prefix">account_circle</i>
                      <input
                         autoComplete = "off"
                         value={userName}
@@ -138,7 +138,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">phone</i>
+                     <i className="material-icons prefix">phone</i>
                      <input
                         autoComplete="off"
                         value={phone}
@@ -152,7 +152,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className=" input-field col s6">
-                     <i class="material-icons prefix">location_on</i>
+                     <i className="material-icons prefix">location_on</i>
                      <input
                         autoComplete="off"
                         value={city}
@@ -180,7 +180,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i class="material-icons prefix">description</i>
+                     <i className="material-icons prefix">description</i>
                      <input
                         autoComplete="off"
                         value={description}
@@ -194,7 +194,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i class="material-icons prefix">picture</i>
+                     <i className="material-icons prefix">picture</i>
                      <input
                         autoComplete= "off"
                         value={profilePic}

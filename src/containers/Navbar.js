@@ -20,11 +20,14 @@ class Navbar extends Component {
             </Link>
             {this.props.currentUser.isAuthenticated ? (
             <ul className="right">
+              
               <li>
                {/*  <Link to={`/api/users/${this.props.currentUser.user._id}`}> */}
-               <Link to={`/profile/${this.props.currentUser.user._id}`}>
-                  Your Profile
+               <Link className="inline-flex" to={`/profile/${this.props.currentUser.user._id}`}>
+               <i className="material-icons prefix">account_circle</i>
+                Profile
                 </Link>
+                
               </li>
               <li>
                 <a onClick={this.logout}>Log out</a>

@@ -85,7 +85,7 @@ class signup extends Component {
                <h2 className="center-align">Sign Up</h2>
                <div className="row">
                   <div className="input-field col s6">
-                     <i class="material-icons prefix">person</i>
+                     <i className="material-icons prefix">person</i>
                      <input
                         value={this.state.firstName}
                         onChange={this.handleInputChange}
@@ -106,7 +106,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">account_circle</i>
+                     <i className="material-icons prefix">account_circle</i>
                      <input
                         value={this.state.userName}
                         onChange={this.handleInputChange}
@@ -118,7 +118,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">email</i>
+                     <i className="material-icons prefix">email</i>
                      <input
                         value={this.state.email}
                         onChange={this.handleInputChange}
@@ -130,7 +130,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className=" input-field col s6">
-                     <i class="material-icons prefix">security</i>
+                     <i className="material-icons prefix">security</i>
                      <input
                         value={this.state.password}
                         onChange={this.handleInputChange}
@@ -151,7 +151,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className=" input-field col s12">
-                     <i class="material-icons prefix">phone</i>
+                     <i className="material-icons prefix">phone</i>
                      <input
                         value={this.state.phone}
                         onChange={this.handleInputChange}
@@ -163,7 +163,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className=" input-field col s6">
-                     <i class="material-icons prefix">location_on</i>
+                     <i className="material-icons prefix">location_on</i>
                      <input
                         value={this.state.city}
                         onChange={this.handleInputChange}
@@ -187,7 +187,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i class="material-icons prefix">description</i>
+                     <i className="material-icons prefix">description</i>
                      <input
                         value={this.state.bio}
                         onChange={this.handleInputChange}
@@ -199,7 +199,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i class="material-icons prefix">picture</i>
+                     <i className="material-icons prefix">picture</i>
                      <input
                         value={this.state.profilePic}
                         onChange={this.handleInputChange}

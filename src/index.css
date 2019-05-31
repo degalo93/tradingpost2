@@ -6,6 +6,7 @@
     font-weight: bold;
 }
 
+
 .navbar a:hover {
     color: lightgrey;
     text-decoration: underline;
@@ -30,7 +31,15 @@
     margin: 1.5rem;
     background-position: center center;
     background-size: cover;
+    
+}
+
+.section-title{
     text-shadow: 0 0 8px #66757f;
+}
+
+.hp-card {
+    background-color: #00bfa65d;
 }
 
 .formContent {
@@ -50,17 +59,20 @@
     padding: 1.5rem;
 }
 
-.card {
-    background-color: #00bfa65d;
-}
 
 .homeCard {
     height: 165px;
+    
 }
 
 .btn {
     margin: 5px;
 }
+
+.inline-flex{
+    display: inline-flex !important;
+}
+
 
 body {
     background: #fafafa grey lighten-5;

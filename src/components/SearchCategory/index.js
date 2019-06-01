@@ -1,10 +1,11 @@
-import React from "react"
+import React, {Component} from "react"
 
-export function SearchCategory(){
-    return(
+ class SearchCategory extends Component {
+    render(){
+      return(
   // example drop down for now ls
-  <div className = "categorydrop col s8 m2">
-    <select className="browser-default">
+  <div>
+    <select className="dropdown">
     
     <option value="General">General</option>
     <option value="Books">Books</option>
@@ -20,3 +21,5 @@ export function SearchCategory(){
   </div>
     )
 }
+ }
+export default SearchCategory;

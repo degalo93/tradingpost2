@@ -6,7 +6,9 @@ import API from "../utils/API";
 import { Redirect } from 'react-router-dom';
 import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
+import Homepage from "../components/Homepage";
 import Landing from "./landing";
+
 
 
 
@@ -170,8 +172,9 @@ class Profile extends Component {
 
             )  }
             else {
-                return (
-                    <Landing/>
+                {this.props.history.push("/")};
+                return (                   
+                   <Landing/>           
                       ); 
             }     
     }

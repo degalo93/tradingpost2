@@ -116,6 +116,11 @@
     background-color: #26a69a;
 }
 
+.post-btn{
+    vertical-align: middle;
+    margin-top: 3rem;
+}
+
 .inline-flex{
     display: inline-flex !important;
 }

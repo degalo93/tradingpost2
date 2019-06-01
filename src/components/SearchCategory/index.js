@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+/* import React, {Component} from "react"
 
  class SearchCategory extends Component {
     render(){
@@ -22,4 +22,31 @@ import React, {Component} from "react"
     )
 }
  }
+export default SearchCategory; */
+
+import React from 'react';
+import Select from 'react-select';
+
+
+const categories = [
+  { label: "General", value: "General" },
+  { label: "Books", value: 'Books' },
+  { label: "Netflix", value: 3 },
+  { label: "Tesla", value: 4 },
+  { label: "Amazon", value: 5 },
+  { label: "Alphabet", value: 6 },
+];
+
+const SearchCategory = () => (
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4"></div>
+      <div className="col-md-4">
+        <Select options={ categories } />
+      </div>
+      <div className="col-md-4"></div>
+    </div>
+  </div>
+);
+
 export default SearchCategory;

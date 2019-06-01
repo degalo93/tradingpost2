@@ -1,6 +1,5 @@
-
 import React, { Component } from "react";
-
+/* import SearchCategory from "../components/SearchCategory"; */
 import CardRow from '../components/CardRow'
 import API from "../utils/API";
 import { SearchBtn } from "../components/SearchBtn";

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BasicCard from "./BasicCard";
 import { Container, Row, Col } from "../components/Grid";
+import Landing from "../pages/landing";
 
 const Homepage = ({currentUser}) => {
  
@@ -54,9 +55,7 @@ const Homepage = ({currentUser}) => {
       );
     } 
     return (
-      <div>
-        <h1>YOU MADE IT!</h1>
-      </div>
+  <Landing/>
     );
 };
 

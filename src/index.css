@@ -150,6 +150,13 @@ body {
   color: #999999 !important;
 }
 
+.css-mnzrfz-control {
+    outline: none;
+    border: 0;
+    box-shadow: white;
+   /*  border-color: white !important; 
+    border-bottom: 1px solid #999999; */
+}
 
 
 /* .navbar-brand {

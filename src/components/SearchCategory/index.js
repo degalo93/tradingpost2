@@ -45,7 +45,7 @@ const categories = [
 
 const colourStyles = {
   control: styles => ({ ...styles, backgroundColor: 'white', outline: 'none', position: 'relative',
-  cursor: 'pointer', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #9e9e9e', height: '3rem', 
+  cursor: 'pointer', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #9e9e9e', height: '3rem', outline: 'none',
   lineHeight: '3rem, width: 100%', fontSize: '16px', margin: '0 0 8px 0', padding: 0, userSelect: 'none'}),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {

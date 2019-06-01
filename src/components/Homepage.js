@@ -6,8 +6,8 @@ import Landing from "../pages/landing";
 
 const Homepage = ({currentUser}) => {
  
-  if(!currentUser.isAuthenticated) { 
-    return (
+ if(!currentUser.isAuthenticated) { 
+    return ( 
       <div className="home-landing">
     <h2 className="section-title">Trading Post</h2>
     <Container>
@@ -56,7 +56,7 @@ const Homepage = ({currentUser}) => {
     } 
     return (
   <Landing/>
-    );
+    ); 
 };
 
 export default Homepage;

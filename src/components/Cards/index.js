@@ -28,7 +28,7 @@ function Card(props) {
       <Col size="col l4 m6 s12">
         <BasicCard>
           <div className="card-image">
-            <Link to={`/trading-post/item/${props.id}`}>
+            <Link to={`/item/${props.id}`}>
               <img
                 className="responsive-img item-image"
                 src={props.image}
@@ -48,7 +48,7 @@ function Card(props) {
                 <Link
                   className="card-action btn text-center teal lighten-1"
                   style={buttonStyle}
-                  to={`/trading-post/item/${props.id}`}
+                  to={`/item/${props.id}`}
                 >
                   Details
                 </Link>

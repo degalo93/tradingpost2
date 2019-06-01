@@ -33,7 +33,7 @@ const Homepage = ({currentUser}) => {
         <Col size="l4 m6 s12">
           <BasicCard classes="hp-card cardContent animated flipInY delay-3s">
           <div className="homeCard">
-          <h2 className="cardTitle feature-title">View, save, and create posts</h2>
+          <p className="cardTitle feature-title">View, save, and create posts</p>
           <p className="text-grey text-darken-4">See other people's posts, save the ones you like for later, and create your owns </p>
           </div>
           </BasicCard>

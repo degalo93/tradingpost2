@@ -4,6 +4,9 @@ import { ProfileTop, List } from '../components/ProfileCard';
 import { Row } from '../components/Grid';
 import API from "../utils/API";
 import { Redirect } from 'react-router-dom';
+import { connect } from "react-redux";
+import { logout } from "../store/actions/auth";
+import Landing from "./landing";
 
 
 
@@ -30,6 +33,11 @@ class Profile extends Component {
         redirect: false,
         categories: ['General', 'Books', 'Electronics', 'Jewerly', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
     };
+
+    logout = e => {
+        e.preventDefault();
+        this.props.logout();
+      };
 
     setRedirect = () => {
         this.setState({
@@ -115,9 +123,10 @@ class Profile extends Component {
         this.props.history.push("/postitem/" + this.state._id);
     }
 
+
     render() {
         /* console.log(this.state) */
-
+        if(this.props.currentUser.isAuthenticated) { 
             return (
                 <div>
 
@@ -158,9 +167,23 @@ class Profile extends Component {
                         />
                     </Row>
                 </div>
-            )       
+
+            )  }
+            else {
+                return (
+                    <Landing/>
+                      ); 
+            }     
     }
 
 }
 
-export default Profile;
+function mapStateToProps(state) {
+    return {
+      currentUser: state.currentUser
+    };
+  }
+  
+  export default connect(mapStateToProps, { logout })(Profile);
+
+//export default Profile;

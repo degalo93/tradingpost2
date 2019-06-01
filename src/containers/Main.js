@@ -17,7 +17,7 @@ const Main = props => {
       <Switch>
         <Route exact path="/" render={props => <Homepage currentUser={currentUser} {...props} />} />
         <Route exact path="/search" component={Landing} />
-        <Route path="/profile/:id" component={Profile} />
+        <Route path="/profile/:id" render={props => <Profile currentUser={currentUser} {...props} />} />
         <Route exact path="/postitem/:id" component={PostItem} />
         <Route exact path="/updateitem/:userid/:itemid" component={UpdateItem} />
          <Route

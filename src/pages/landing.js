@@ -61,7 +61,7 @@ class Landing extends Component {
 
       <div>
         <div>
-          <form className="search">
+          <form className="search search-form">
             <div className="row">
               <div className="col s12 m5 l5" style={{ 'margin-top': '15px' }}>
 

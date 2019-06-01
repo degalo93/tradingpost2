@@ -25,7 +25,7 @@ const Homepage = ({currentUser}) => {
         <Col size="l4 m6 s12">
           <BasicCard classes="hp-card cardContent animated flipInY delay-2s">
             <div className="homeCard">
-          <h2 className="cardTitle text-grey text-darken-4">Create an account</h2>
+          <h2 className="cardTitle feature-title">Create an account</h2>
           <p className="text-grey text-darken-4">When you create an account with us, this allows you to post items, and also save them to your wishlist if you don't have anything to trade at the moment</p>
           </div>
           </BasicCard>
@@ -33,7 +33,7 @@ const Homepage = ({currentUser}) => {
         <Col size="l4 m6 s12">
           <BasicCard classes="hp-card cardContent animated flipInY delay-3s">
           <div className="homeCard">
-          <h2 className="cardTitle text-grey text-darken-4">View, save, and create posts</h2>
+          <h2 className="cardTitle feature-title">View, save, and create posts</h2>
           <p className="text-grey text-darken-4">See other people's posts, save the ones you like for later, and create your owns </p>
           </div>
           </BasicCard>
@@ -41,13 +41,13 @@ const Homepage = ({currentUser}) => {
         <Col size="l4 m6 s12">
           <BasicCard classes="hp-card cardContent animated flipInY delay-4s">
           <div className="homeCard">
-          <h2 className="cardTitle text-grey text-darken-4">Contact users, and trade!</h2>
+          <h2 className="cardTitle feature-title">Contact users, and trade!</h2>
           <p className="text-grey text-darken-4">If you see something you like, you can message the person who posted it, and if you can work out a deal, meet up and trade!</p>
           </div>
           </BasicCard>
         </Col>
       </Row>
-      <Link to="/search" className="btn btn-primary animated fadeIn delay-5s">
+      <Link to="/search" className="btn btn-primary waves-effect waves-teal animated fadeIn delay-5s">
       Enter Site
       </Link>
     </Container>

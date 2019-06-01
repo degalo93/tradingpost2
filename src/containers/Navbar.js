@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
 
-
 class Navbar extends Component {
   logout = e => {
     e.preventDefault();
@@ -11,42 +10,51 @@ class Navbar extends Component {
   };
 
   render() {
-      
     return (
       <div>
-      <nav className="nav-wrapper cyan darken-3">
-             <Link to="/" className="brand-logo">
-              <img src=" " alt="Trading-Post" />
-            </Link>
-            {this.props.currentUser.isAuthenticated ? (
+        <nav className="nav-wrapper cyan darken-3">
+          <ul class="left">
+            <li>
+              <Link to="/" className="nav-pic-link">
+                <img className="nav-pic" src="/Logo.png" alt="Trading-Post" />
+              </Link>
+            </li>
+            <li>
+              <Link className="tp-link">
+              <span className="navbar-title inline-flex">Trading Post</span>
+              </Link>
+            </li>
+          </ul>
+          {this.props.currentUser.isAuthenticated ? (
             <ul className="right">
-              
               <li>
-               {/*  <Link to={`/api/users/${this.props.currentUser.user._id}`}> */}
-               <Link className="inline-flex" to={`/profile/${this.props.currentUser.user._id}`}>
-               <i className="material-icons prefix">account_circle</i>
-                Profile
+                {/*  <Link to={`/api/users/${this.props.currentUser.user._id}`}> */}
+                <Link
+                  className="inline-flex"
+                  to={`/profile/${this.props.currentUser.user._id}`}
+                >
+                  <i className="material-icons prefix">account_circle</i>
+                  Profile
                 </Link>
-                
               </li>
               <li>
                 <a onClick={this.logout}>Log out</a>
               </li>
             </ul>
           ) : (
-          <ul className="right">
-            <li>
-              <Link to="/signup">Sign up</Link>
-            </li>
-            <li>
-              <Link to="/signin">Log in</Link>
-            </li>
-          </ul>
+            <ul className="right">
+              <li>
+                <Link to="/signup">Sign up</Link>
+              </li>
+              <li>
+                <Link to="/signin">Log in</Link>
+              </li>
+            </ul>
           )}
-      </nav>
+        </nav>
       </div>
     );
- }
+  }
 }
 
 function mapStateToProps(state) {
@@ -55,4 +63,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(
+  mapStateToProps,
+  { logout }
+)(Navbar);

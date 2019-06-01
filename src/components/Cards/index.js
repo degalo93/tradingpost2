@@ -48,7 +48,7 @@ function Card(props) {
                 <Link
                   className="card-action btn text-center teal lighten-1"
                   style={buttonStyle}
-                  href={`/trading-post/item/${props.id}`}
+                  to={`/trading-post/item/${props.id}`}
                 >
                   Details
                 </Link>

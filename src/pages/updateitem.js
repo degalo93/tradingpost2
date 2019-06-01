@@ -3,10 +3,10 @@ import { Container } from '../components/Grid';
 import API from "../utils/API";
 
 
-
 class UpdateItem extends Component {
 
   state = {
+    userId: "",
     _id: "",
     title: "",
     picture: "",
@@ -18,16 +18,14 @@ class UpdateItem extends Component {
   };
 
   componentDidMount() {
-    const { id } = this.props.match.params
-    console.log("id " + id);
-
-    this.setState({ _id: id });
-
-    this.loadItemInfo(id);
+    const { userid, itemid } = this.props.match.params
+    console.log("id " + userid + " itemId  " + itemid);
+    this.setState({ _id: itemid , userId: userid});
+    this.loadItemInfo(userid, itemid);
   }
 
-  loadItemInfo = (id) => {
-    API.updateItem(id)
+  loadItemInfo = (userid, itemid) => {
+    API.updateItem(userid, itemid)
       .then(
         res => {
           console.log(res.data)
@@ -62,9 +60,9 @@ class UpdateItem extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.state.selectedCategory);
-    let path = "/trading-post/profile/" + sessionStorage.getItem("UserId");
-    console.log("path: " + path);
-    API.updateExistingItem(this.state._id,
+    /* let path = "/trading-post/profile/" + sessionStorage.getItem("UserId");
+    console.log("path: " + path); */
+    API.updateExistingItem(this.state.userId, this.state._id,
       {
         title: this.state.title,
         picture: this.state.picture.length === 0 ? "https://www.pluggedin.com/images/content-image/placeholder_book.jpg" : this.state.picture,
@@ -73,8 +71,7 @@ class UpdateItem extends Component {
       })
       .then(res => {
         console.log("The item was updated " + res.data);
-
-        this.props.history.push(`/trading-post/profile/${sessionStorage.getItem("UserId")}`);
+        this.props.history.push(`/profile/${this.state.userId}`);
         //this.renderRedirect(); 
         //add later redirect to the profile page if the item was added sucessfully
         //this.setState({ returnedItems: res.data, searchTerm: "" });     5ccf460d1cae0a3028fe84fd
@@ -98,15 +95,6 @@ class UpdateItem extends Component {
                   onChange={this.handleInputChange}
                   name="title" required />
               </div>
-
-              {/*    <div className="input-field col s6">
-                            <div>
-                                <select className="select-dropdown" value={this.state.selectedCategory} id="dropdown"
-                                    onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
-                                    {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
-                                </select>
-                            </div>
-                        </div> */}
             </div>
             <div className="row">
               <div className="input-field col s2">
@@ -133,12 +121,10 @@ class UpdateItem extends Component {
                 <input id="picture" type="text" name="picture" onChange={this.handleInputChange} value={this.state.picture} required />
               </div>
             </div>
-            <button className="btn" onClick={this.handleFormSubmit}>Update Item</button>
+            <button className="waves-effect waves-light btn-small" onClick={this.handleFormSubmit}>Update Item</button>
           </div>
         </form>
       </Container>
-
-
 
     )
   }

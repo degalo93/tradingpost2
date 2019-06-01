@@ -47,7 +47,7 @@ class Profile extends Component {
     //method to redirect to postitem page on 'Add Item' button click
     routeChangeAddItem = () => {
         console.log("id " + this.state._id);
-        let path = "/trading-post/postitem/" + this.state._id;
+        let path = "/postitem/" + this.state._id;
         this.props.history.push(path);
     }
 
@@ -94,11 +94,21 @@ class Profile extends Component {
     //method to delete an item 
     deleteUserItem = (userId, itemId) => {
         API.deleteItem(userId, itemId).then(res => {
-            this.props.history.push("/trading-post/profile/" + this.state._id);
-
-            this.loadUser(sessionStorage.getItem("UserId"))
+            console.log("Item deleted");
+            this.loadUser(this.state._id);                 
         })
     }
+
+    //method to update an item 
+    updateUserItem = (userId, itemId) => { 
+            console.log("To update Item");
+            let path = "/updateitem/" + this.state._id + "/" + itemId;
+            console.log(path);
+            this.props.history.push("/updateitem/" + this.state._id + "/" + itemId);
+            //return <Redirect to={path}/>               
+    }
+    
+
 
     routeChangeAddItem = () => {
         console.log("id " + this.state._id);
@@ -106,9 +116,8 @@ class Profile extends Component {
     }
 
     render() {
-        console.log(this.state)
+        /* console.log(this.state) */
 
-        /* if (sessionStorage.getItem("UserId")) { */
             return (
                 <div>
 
@@ -122,7 +131,7 @@ class Profile extends Component {
                         <div className="col s6">
                         </div>
                         <div className="col s6">
-                            <button className="waves-effect waves-light btn-small" style={{ fontSize: 10 }} onClick={this.routeChangeAddItem}>Add Item</button>
+                            <button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={this.routeChangeAddItem}>Add Item</button>
                             {/*  {this.renderRedirect()}
                             <button className="waves-effect waves-light btn-small" style={{ fontSize: 10 }} onClick={this.setRedirect}>Add Item</button>  */}
                         </div>
@@ -133,6 +142,7 @@ class Profile extends Component {
                             listTitle="Posts"
                             userId={this.state._id}
                             deleteUserItem={this.deleteUserItem}
+                            updateUserItem={this.updateUserItem}
                             items={
                                 this.state.items
                             }
@@ -148,14 +158,7 @@ class Profile extends Component {
                         />
                     </Row>
                 </div>
-            )
-       /*  } else {
-            return (
-                <Redirect to="/trading-post"></Redirect>
-            )
-        } */
-
-
+            )       
     }
 
 }

@@ -28,25 +28,51 @@ import React from 'react';
 import Select from 'react-select';
 
 
+
 const categories = [
-  { label: "General", value: "General" },
-  { label: "Books", value: 'Books' },
-  { label: "Netflix", value: 3 },
-  { label: "Tesla", value: 4 },
-  { label: "Amazon", value: 5 },
-  { label: "Alphabet", value: 6 },
+ { label: "General", value: "General" },
+ { label: "Books", value: 'Books' },
+ { label: "Electronics", value: "Electronics" },
+ { label: "Jewelry", value: "Jewelry" },
+ { label: "Tools", value: "Tools" },
+ { label: "Clothing", value: "Clothing" },
+ { label: "Furniture", value: "Furniture" },
+ { label: "Games", value: "Games" },
+ { label: "Sports Equipment", value: "Sports Equipment" },
+ { label: "Appliances", value: "Appliances" },
+
 ];
+
+const colourStyles = {
+  control: styles => ({ ...styles, backgroundColor: 'white', outline: 'none', position: 'relative',
+  cursor: 'pointer', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #9e9e9e', height: '3rem', 
+  lineHeight: '3rem, width: 100%', fontSize: '16px', margin: '0 0 8px 0', padding: 0, userSelect: 'none'}),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: 'white',
+      color: '#757575',
+      cursor: isDisabled ? 'not-allowed' : 'default',
+    };
+  },
+};
 
 const SearchCategory = () => (
   <div className="container">
     <div className="row">
-      <div className="col-md-4"></div>
-      <div className="col-md-4">
+      <div>
         <Select options={ categories } />
       </div>
-      <div className="col-md-4"></div>
     </div>
   </div>
 );
 
-export default SearchCategory;
+//export default SearchCategory;
+export default () => (
+  <Select
+    defaultValue={categories[0]}
+    label="Single select"
+    options={categories}
+    styles={colourStyles}
+  />
+);

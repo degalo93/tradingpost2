@@ -140,6 +140,17 @@ body {
     /* Firefox */
 }
 
+.css-1okebmr-indicatorSeparator {
+    background-color: white !important;
+    color: white;
+ }
+
+
+.css-1uccc91-singleValue {
+  color: #999999 !important;
+}
+
+
 
 /* .navbar-brand {
     display: inline-block;

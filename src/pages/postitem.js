@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
 import { Container } from '../components/Grid';
 import API from "../utils/API";
 import styles from '../components/Postform/style.css';
+import SearchCategory from "../components/SearchCategory";
 
 
 
@@ -21,7 +21,6 @@ class PostItem extends Component {
     description: "",
     selectedCategory: "General",
     condition: "",
-    categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
   };
 
 
@@ -38,11 +37,11 @@ class PostItem extends Component {
     const { id } = this.props.match.params
     console.log("id " + id);  
     this.setState({_owner: id});
-    //this.selectCategory.;
+   
+  
    /*  let categOptions = this.state.categories;
     this.setState.optionItems = categOptions.map((category) =>
                 <option key={category.name}>{category.name}</option>) */
-    
    
   } 
 
@@ -95,11 +94,12 @@ class PostItem extends Component {
 
               <div className="input-field col s6">
                 <div>
-                  <select className="select-dropdown"  value={this.state.selectedCategory} id="dropdown"
+                <SearchCategory/>
+                  {/* <select className="select-dropdown"  value={this.state.selectedCategory} id="dropdown"
                     onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
                   {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
               
-                  </select>
+                  </select> */}
                 </div>
               </div>
             </div>

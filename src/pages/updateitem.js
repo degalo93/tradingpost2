@@ -7,6 +7,7 @@ import API from "../utils/API";
 class UpdateItem extends Component {
 
   state = {
+    userId: "",
     _id: "",
     title: "",
     picture: "",
@@ -18,16 +19,16 @@ class UpdateItem extends Component {
   };
 
   componentDidMount() {
-    const { id } = this.props.match.params
-    console.log("id " + id);
+    const { userid, itemid } = this.props.match.params
+    console.log("id " + userid + " itemId  " + itemid);
 
-    this.setState({ _id: id });
+    this.setState({ _id: itemid , userId: userid});
 
-    this.loadItemInfo(id);
+    this.loadItemInfo(userid, itemid);
   }
 
-  loadItemInfo = (id) => {
-    API.updateItem(id)
+  loadItemInfo = (userid, itemid) => {
+    API.updateItem(userid, itemid)
       .then(
         res => {
           console.log(res.data)

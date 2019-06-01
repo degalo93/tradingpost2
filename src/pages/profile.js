@@ -95,12 +95,20 @@ class Profile extends Component {
     deleteUserItem = (userId, itemId) => {
         API.deleteItem(userId, itemId).then(res => {
             console.log("Item deleted");
-            this.loadUser(this.state._id);
-            //this.props.history.push("/profile/" + this.state._id);
-            //let path = "/profile/" + this.state._id;
-            //return <Redirect to={path}/>               
+            this.loadUser(this.state._id);                 
         })
     }
+
+    //method to update an item 
+    updateUserItem = (userId, itemId) => { 
+            console.log("To update Item");
+            let path = "/updateitem/" + this.state._id + "/" + itemId;
+            console.log(path);
+            this.props.history.push("/updateitem/" + this.state._id + "/" + itemId);
+            //return <Redirect to={path}/>               
+    }
+    
+
 
     routeChangeAddItem = () => {
         console.log("id " + this.state._id);
@@ -123,7 +131,7 @@ class Profile extends Component {
                         <div className="col s6">
                         </div>
                         <div className="col s6">
-                            <button className="waves-effect waves-light btn-small" style={{ fontSize: 10 }} onClick={this.routeChangeAddItem}>Add Item</button>
+                            <button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={this.routeChangeAddItem}>Add Item</button>
                             {/*  {this.renderRedirect()}
                             <button className="waves-effect waves-light btn-small" style={{ fontSize: 10 }} onClick={this.setRedirect}>Add Item</button>  */}
                         </div>
@@ -134,6 +142,7 @@ class Profile extends Component {
                             listTitle="Posts"
                             userId={this.state._id}
                             deleteUserItem={this.deleteUserItem}
+                            updateUserItem={this.updateUserItem}
                             items={
                                 this.state.items
                             }

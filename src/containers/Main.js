@@ -7,6 +7,7 @@ import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import Landing from "../pages/landing";
 import Profile from "../pages/profile";
+import UpdateItem from "../pages/updateitem";
 import PostItem from "../pages/postitem";
  
 const Main = props => {
@@ -18,6 +19,7 @@ const Main = props => {
         <Route exact path="/search" component={Landing} />
         <Route path="/profile/:id" component={Profile} />
         <Route exact path="/postitem/:id" component={PostItem} />
+        <Route exact path="/updateitem/:userid/:itemid" component={UpdateItem} />
          <Route
           exact
           path="/signin"

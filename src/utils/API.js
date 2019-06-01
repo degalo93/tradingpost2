@@ -48,8 +48,9 @@ export default {
     */
 
     //get request for update an item form
-    updateItem: function (itemid) {
-        return axios.get("https://trading-post-server.herokuapp.com/api/items/single/" + itemid);
+    updateItem: function (userId, itemId) {
+        /* return axios.get("https://trading-post-server.herokuapp.com/api/items/single/" + itemid); */
+        return axios.get(`https://tradingpost-server-hz.herokuapp.com/api/items/${userId}/item/${itemId}`);
         /* example
         {
         title: "A ring",

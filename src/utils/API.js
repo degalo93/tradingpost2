@@ -49,29 +49,16 @@ export default {
 
     //get request for update an item form
     updateItem: function (userId, itemId) {
-        /* return axios.get("https://trading-post-server.herokuapp.com/api/items/single/" + itemid); */
         return axios.get(`https://tradingpost-server-hz.herokuapp.com/api/items/${userId}/item/${itemId}`);
-        /* example
-        {
-        title: "A ring",
-        picture: "test",
-        description: "old golden ring with ruby",
-        condition: "good",
-        category: "Jewelry",
-        _id: "5cca086a4c0a7d0017d2382e",
-        _owner: "5cca0613076d830017d9f38d",
-        createdAt: "2019-05-01T20:58:18.447Z",
-        updatedAt: "2019-05-01T20:58:18.447Z",
-        __v: 0
-        }
-        */
     },
     //put request for updating an existing item
-    updateExistingItem: function (itemid, postData) {
-        return axios.put("https://trading-post-server.herokuapp.com/api/items/single/" + itemid, postData)
-
+    updateExistingItem: function (userid, itemid, postData) {
+        /* return axios.put("https://trading-post-server.herokuapp.com/api/items/single/" + itemid, postData) */
+        return axios.put(`https://tradingpost-server-hz.herokuapp.com/api/items/${userid}/item/${itemid}`, postData)
         //on the backend we have to make sure we update only four fields for a given itemid!
         /* example
+        '/api/items/:userId/item/:itemId'
+
         {	
         title: "A ring",
         picture: "test",

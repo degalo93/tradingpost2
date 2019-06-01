@@ -45,8 +45,8 @@ export function List(props) {
                             <tr key={item._id}>
                                 <td><a href={"/trading-post/item/" + item._id}>{item.title}</a></td>
                                {/* <a href={"/trading-post/updateitem/" + item._id}>Update Item</a></td> */}
-                                <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9, padding: '1px'}} onClick={() => props.updateUserItem(UserId, item._id)}>Update Item</button></td>
-                                <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9, padding: '1px'}} onClick={() => props.deleteUserItem(UserId, item._id)}>Delete Item</button></td>
+                                <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={() => props.updateUserItem(UserId, item._id)}>Update Item</button></td>
+                                <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={() => props.deleteUserItem(UserId, item._id)}>Delete Item</button></td>
                             </tr>
                         ))
                         }

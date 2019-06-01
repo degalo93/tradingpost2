@@ -47,7 +47,7 @@ class Profile extends Component {
     //method to redirect to postitem page on 'Add Item' button click
     routeChangeAddItem = () => {
         console.log("id " + this.state._id);
-        let path = "/trading-post/postitem/" + this.state._id;
+        let path = "/postitem/" + this.state._id;
         this.props.history.push(path);
     }
 
@@ -94,9 +94,11 @@ class Profile extends Component {
     //method to delete an item 
     deleteUserItem = (userId, itemId) => {
         API.deleteItem(userId, itemId).then(res => {
-            this.props.history.push("/trading-post/profile/" + this.state._id);
-
-            this.loadUser(sessionStorage.getItem("UserId"))
+            console.log("Item deleted");
+            this.loadUser(this.state._id);
+            //this.props.history.push("/profile/" + this.state._id);
+            //let path = "/profile/" + this.state._id;
+            //return <Redirect to={path}/>               
         })
     }
 
@@ -106,9 +108,8 @@ class Profile extends Component {
     }
 
     render() {
-        console.log(this.state)
+        /* console.log(this.state) */
 
-        /* if (sessionStorage.getItem("UserId")) { */
             return (
                 <div>
 
@@ -148,14 +149,7 @@ class Profile extends Component {
                         />
                     </Row>
                 </div>
-            )
-       /*  } else {
-            return (
-                <Redirect to="/trading-post"></Redirect>
-            )
-        } */
-
-
+            )       
     }
 
 }

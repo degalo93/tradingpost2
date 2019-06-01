@@ -41,7 +41,7 @@ function Card(props) {
               </p>
             </div>
           </div>
-          <div style={content}>
+          <div>
             <p className="truncate">{props.description}</p>
             <Row>
               <Col size="col s2 offset-s6">

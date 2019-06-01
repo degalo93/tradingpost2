@@ -6,6 +6,11 @@
     font-weight: bold;
 }
 
+.nav-logo{
+    height: 55px;
+    width: 75px;
+}
+
 
 .navbar a:hover {
     color: lightgrey;
@@ -27,19 +32,23 @@
     z-index: -1;
     background-image: url("/placeholder.jpg");
     text-align: center;
-    padding: 1rem;
-    margin: 1.5rem;
+    /* padding-top: 1rem; */
+    margin-top: 2rem;
     background-position: center center;
     background-size: cover;
     
 }
 
 .section-title{
-    text-shadow: 0 0 8px #66757f;
+    color: #301515;
+    text-shadow: 0 0 2px #000000;
+}
+.feature-title {
+    color: #301515;
 }
 
 .hp-card {
-    background-color: #00bfa65d;
+    background-color: #04703e98;
 }
 
 .formContent {

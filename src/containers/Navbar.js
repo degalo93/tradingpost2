@@ -16,7 +16,7 @@ class Navbar extends Component {
       <div>
       <nav className="nav-wrapper cyan darken-3">
              <Link to="/" className="brand-logo">
-              <img src=" " alt="Trading-Post" />
+              <img className="nav-logo" src="/Logo.png" alt="Trading-Post" />
             </Link>
             {this.props.currentUser.isAuthenticated ? (
             <ul className="right">

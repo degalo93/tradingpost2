@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-/* import SearchCategory from "../components/SearchCategory"; */
+ import SearchCategory from "../components/SearchCategory"; 
 import CardRow from '../components/CardRow'
 import API from "../utils/API";
 import { SearchBtn } from "../components/SearchBtn";
@@ -62,10 +62,10 @@ class Landing extends Component {
           <form className="search">
             <div className="row">
               <div className="col s12 m5 l5" style={{ 'margin-top': '15px' }}>
-                <select value={this.state.selectedCategory} id="dropdown"
+                {/* <select value={this.state.selectedCategory} id="dropdown"
                   onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
                   {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
-                </select>
+                </select> */}<SearchCategory/>
               </div>
               <div className="input-field col s12 m5 l5">
                 <i class="material-icons prefix">search</i>

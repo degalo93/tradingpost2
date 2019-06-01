@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container } from '../components/Grid';
 import API from "../utils/API";
+import SearchCategory from "../components/SearchCategory";
 
 
 class UpdateItem extends Component {
@@ -14,7 +15,6 @@ class UpdateItem extends Component {
     selectedCategory: "General",
     condition: "",
     //redirect: false,
-    categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
   };
 
   componentDidMount() {

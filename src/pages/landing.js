@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import CardRow from '../components/CardRow'
 import API from "../utils/API";
 import { SearchBtn } from "../components/SearchBtn";
-import SearchCategory from "../components/SearchCategory";
+
 
 
 class Landing extends Component {

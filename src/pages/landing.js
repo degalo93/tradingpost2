@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import CardRow from '../components/CardRow'
 import API from "../utils/API";
 import { SearchBtn } from "../components/SearchBtn";
+import SearchCategory from "../components/SearchCategory";
 
 
 class Landing extends Component {
@@ -12,7 +13,7 @@ class Landing extends Component {
     searchTerm: "",
     pg: "Landing",
     selectedCategory: "General",
-    categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
+    //categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
   };
 
   handleInputChange = event => {
@@ -36,6 +37,7 @@ class Landing extends Component {
 
   componentDidMount() {
     this.loadItems();
+    
   }
 
   loadItems = () => {
@@ -62,10 +64,11 @@ class Landing extends Component {
           <form className="search">
             <div className="row">
               <div className="col s12 m5 l5" style={{ 'margin-top': '15px' }}>
-                <select value={this.state.selectedCategory} id="dropdown"
+              <SearchCategory />
+               {/*  <select value={this.state.selectedCategory} id="dropdown"
                   onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
                   {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
-                </select>
+                </select> */}
               </div>
               <div className="input-field col s12 m5 l5">
                 <i class="material-icons prefix">search</i>

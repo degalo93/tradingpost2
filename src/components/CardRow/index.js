@@ -16,6 +16,10 @@ function CardRow(props) {
                         image={item.picture}
                         id={item._id}
                         key={item._id}
+                        condition = {item.condition}
+                        owner = {item._owner._id}
+                        category = {item.category}
+
                     />
                 ))}
             </div>

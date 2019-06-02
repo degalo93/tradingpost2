@@ -30,6 +30,7 @@ class Landing extends Component {
     API.getSearchedItems(this.state.selectedCategory, this.state.searchTerm)
     .then(res => {
       console.log(res.data);
+      console.log("landing: " + res.data.items.length);
       this.setState({ returnedItems: res.data, searchTerm: "" });     
     })
   };
@@ -64,11 +65,6 @@ class Landing extends Component {
             <div className="row">
               <div className="col s12 m5 l5" style={{ 'margin-top': '15px' }}>
 
-         
-                {/* <select value={this.state.selectedCategory} id="dropdown"
-                  onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
-                  {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
-                </select> */}
                 <SearchCategory/>
 
               </div>

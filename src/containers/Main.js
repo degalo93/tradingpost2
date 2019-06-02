@@ -21,7 +21,7 @@ const Main = props => {
         <Route path="/profile/:id" render={props => <Profile currentUser={currentUser} {...props} />} />
         <Route exact path="/postitem/:id" component={PostItem} />
         <Route exact path="/updateitem/:userid/:itemid" component={UpdateItem} />
-        <Route exact path="/item/:id" component={Item} />
+        <Route exact path="/item/:userid/:itemid" component={Item} />
          <Route
           exact
           path="/signin"

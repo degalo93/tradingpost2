@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ItemCard from '../components/ItemCard'
 import API from "../utils/API"
+import { isTSTypeParameterDeclaration } from '@babel/types';
 
 
 
@@ -17,14 +18,14 @@ class ItemPage extends Component {
     }
 
     componentDidMount() {
-        const { id } = this.props.match.params;
-
-        this.getItem(id)
+        const { userid, itemid } = this.props.match.params;
+        console.log(`userid: ${userid} itemid ${itemid}`);
+        this.getItem( userid, itemid );
 
     }
 
-    getItem = (id) => {
-        API.getItemData(id)
+    getItem = (userId, itemId) => {
+        API.updateItem(userId, itemId)
             .then(
                 res => {
                     console.log(res.data)

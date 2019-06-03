@@ -84,7 +84,7 @@ function ItemCard(props) {
       <div id="emailForm" className="modal">
         <div className="container">
           <form
-            action={"mailto:" + props.ownerEmail}
+            action={"mailto: testEmail@gmail.com"}
             method="post"
             enctype="text/plain"
           >

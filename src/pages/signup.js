@@ -199,7 +199,7 @@ class signup extends Component {
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i className="material-icons prefix">picture</i>
+                     <i className="material-icons prefix">description</i>
                      <input
                         value={this.state.profilePic}
                         onChange={this.handleInputChange}

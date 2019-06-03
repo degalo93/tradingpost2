@@ -28,7 +28,6 @@ import React from 'react';
 import Select from 'react-select';
 
 
-
 const categories = [
  { label: "General", value: "General" },
  { label: "Books", value: 'Books' },
@@ -68,7 +67,7 @@ const SearchCategory = () => (
 );
 
 //export default SearchCategory;
-export default () => (
+export default SearchCategory => (
   <Select
     defaultValue={categories[0]}
     label="Single select"

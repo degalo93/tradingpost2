@@ -7,6 +7,7 @@ import { isTSTypeParameterDeclaration } from '@babel/types';
 
 
 class ItemPage extends Component {
+
     state = {
         id: "",
         picture: "",
@@ -14,17 +15,29 @@ class ItemPage extends Component {
         description: "",
         condition: "",
         ownerID: "",
-        ownerEmail: ""
-    }
+        ownerEmail: "",
+        nick: ""
+    };
+ 
+   
 
     componentDidMount() {
         const { userid, itemid } = this.props.match.params;
-        console.log(`userid: ${userid} itemid ${itemid}`);
-        this.getItem( userid, itemid );
+        const {description, nick, title, condition, picture, email } = this.props.location.state;
+        this.setState({
+            description,
+            nick,
+            title,
+            condition,
+            picture,
+            email
+        });
+       
+        //this.getItem( userid, itemid );
 
     }
 
-    getItem = (userId, itemId) => {
+/*     getItem = (userId, itemId) => {
         API.updateItem(userId, itemId)
             .then(
                 res => {
@@ -42,19 +55,19 @@ class ItemPage extends Component {
                     this.setState({ isLoaded: true, error });
                 }
             )
-        //.catch(err => console.log(err));
-    };
+    }; */
 
 
 
     render() {
+
         return (
             <ItemCard
                 picture={this.state.picture}
                 title={this.state.title}
                 description={this.state.description}
                 condition={this.state.condition}
-                ownerEmail={this.state.ownerEmail} />
+                ownerEmail={this.state.email} />
         )
     }
 

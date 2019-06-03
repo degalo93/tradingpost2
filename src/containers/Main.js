@@ -9,7 +9,7 @@ import Landing from "../pages/landing";
 import Profile from "../pages/profile";
 import UpdateItem from "../pages/updateitem";
 import PostItem from "../pages/postitem";
-import Item from "../pages/item"
+import ItemPage from "../pages/item"
  
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props; 
@@ -21,7 +21,7 @@ const Main = props => {
         <Route path="/profile/:id" render={props => <Profile currentUser={currentUser} {...props} />} />
         <Route exact path="/postitem/:id" component={PostItem} />
         <Route exact path="/updateitem/:userid/:itemid" component={UpdateItem} />
-        <Route exact path="/item/:userid/:itemid" component={Item} />
+        <Route exact path="/item/:userid/:itemid" render={props => <ItemPage currentUser={currentUser} {...props} />} />
          <Route
           exact
           path="/signin"

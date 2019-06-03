@@ -20,7 +20,7 @@ class Navbar extends Component {
               </Link>
             </li>
             <li>
-              <Link className="tp-link">
+              <Link to="/" className="tp-link">
               <span className="navbar-title inline-flex">Trading Post</span>
               </Link>
             </li>

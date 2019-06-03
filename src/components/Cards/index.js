@@ -26,7 +26,7 @@ function Card(props) {
   console.log("Inside Card ownerid" + props.owner + " id " + props.id + " nick " + props.nick + " desc " + props.description);
   return (
     <div>
-      <Col size="col l4 m6 s12">
+      <Col size="l4 m6 s12">
         <BasicCard>
           <div className="card-image">
             <Link to={`/item/${props.id}`}>
@@ -45,7 +45,7 @@ function Card(props) {
           <div>
             <p className="truncate">{props.description}</p>
             <Row>
-              <Col size="col s2 offset-s6">
+              <Col size="s2 offset-s6">
                 <Link
                   className="card-action btn text-center teal lighten-1"
                   style={buttonStyle}

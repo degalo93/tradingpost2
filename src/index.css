@@ -91,9 +91,12 @@
     margin: 5px;
 }
 
+.card .card-image img{
+    width:auto;
+}
+
 .item-image {
     height: 200px !important;
-    width: 100% !important;
     display: block !important;
     margin: auto !important;
 }

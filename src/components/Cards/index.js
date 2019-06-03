@@ -49,7 +49,7 @@ function Card(props) {
              {props.currentUser.isAuthenticated ? ( 
 
                 <Link
-                         className="card-action btn text-center teal lighten-1"
+                         className="card-action btn waves-effect waves-light text-center teal lighten-1"
                          style={buttonStyle}
                          to={ { pathname:`/item/${props.owner}/${props.id}`, 
                          state: {

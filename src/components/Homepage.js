@@ -47,7 +47,7 @@ const Homepage = ({currentUser}) => {
           </BasicCard>
         </Col>
       </Row>
-      <Link to="/search" className="btn btn-primary waves-effect waves-teal animated fadeIn delay-5s">
+      <Link to="/search" className="btn btn-primary waves-effect waves-light animated fadeIn delay-5s">
       Enter Site
       </Link>
     </Container>

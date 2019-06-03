@@ -20,6 +20,17 @@
     font-size: 22px;
 }
 
+.navbar-icon {
+    vertical-align: middle;
+    margin-right: 3px;
+    padding-top: 5px;
+}
+
+.item-section-title{
+    margin-left: 0px;
+    padding-left:20px;
+}
+
 .tp-link {
     padding-left: 5px !important;
 }
@@ -83,6 +94,10 @@
     color: rgb(230, 230, 230);
 }
 
+.card-content {
+    padding-bottom: 0px !important;
+}
+
 .homeCard {
     height: 250px;
 }
@@ -94,6 +109,7 @@
 .card .card-image img{
     width:auto;
 }
+
 
 .item-image {
     height: 200px !important;

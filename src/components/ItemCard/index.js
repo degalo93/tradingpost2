@@ -15,6 +15,8 @@ const buttonStyle = {
   margin: "2px, 2px, 10px, 2px"
 };
 
+
+
 function ItemCard(props) {
   console.log("ItemCard props " + props);
  //console.log("ItemCard user " + props.currentUser.isAuthenticated);
@@ -47,9 +49,9 @@ function ItemCard(props) {
             <div className="card-content">
               <Row>
                 <Col size="s7">
-                  <h5>Description: </h5>
+                  <h5 className="item-section-title">Description: </h5>
                   <Row>
-                    <Col size="s11 offset-s1">
+                    <Col size="s12">
                       <p>{props.description}</p>
                     </Col>
                   </Row>
@@ -57,21 +59,28 @@ function ItemCard(props) {
                 <Row>
                   <Col size="s4">
                     <Row>
-                      <h5>Condition: {props.condition}</h5>
+                      <h5 className="item-section-title">Condition:</h5>
+                      <Col size="s12">
+                      <p>{props.condition}</p>
+                    </Col>
                     </Row>
                     <Row>
                       <Col size="s10 offset-s1">
                      {/*  {props.currentUser.isAuthenticated ? (  */}
-                        <Link
-                          to="#emailForm"
-                          className="btn green modal-trigger"
+                      <form
+            action={"mailto: testEmail@gmail.com"}
+            method="post"
+            enctype="text/plain"
+          >
+                        <button
+                          className="btn green waves-effect waves-light"
+                          type="submit"
                           style={buttonStyle}
                         >
                           Email this user!
-                        </Link>
-                    {/*   ) : (
-                        <div></div>
-                      )} */}
+                        </button>
+                        </form>
+                    
                       </Col>
                     </Row>
                   </Col>
@@ -79,30 +88,6 @@ function ItemCard(props) {
               </Row>
             </div>
           </Row>
-        </div>
-      </div>
-      <div id="emailForm" className="modal">
-        <div className="container">
-          <form
-            action={"mailto: testEmail@gmail.com"}
-            method="post"
-            enctype="text/plain"
-          >
-            <br />
-            Hi, My name is <input type="text" name="name" placeholder="Name" />
-            <br />
-            <br />
-            <input
-              type="text"
-              name="comment"
-              size="50"
-              placeholder="Your Message Here"
-            />
-            <br />
-            <br />
-            <input type="submit" value="Send" />
-            <input type="reset" value="Reset" />
-          </form>
         </div>
       </div>
     </Container>

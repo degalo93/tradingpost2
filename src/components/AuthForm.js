@@ -192,7 +192,7 @@ import PropTypes from "prop-types";
                </div>
                <div className="row">
                   <div className="input-field col s12">
-                     <i className="material-icons prefix">picture</i>
+                     <i className="material-icons prefix">camera_enhance</i>
                      <input
                         autoComplete= "off"
                         value={profilePic}

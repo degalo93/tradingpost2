@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const picStyle = {
     border: "2px solid #00838f"
@@ -51,7 +51,7 @@ export function List(props) {
 
                         {props.items.map(item => (
                             <tr key={item._id} >
-                                <td style = {listStyle} ><Link  to={`/item/${props.owner}/${props.id}`}  >{item.title}</Link></td>
+                                <td style = {listStyle} >{item.title}</td>
                                {/* <a href={"/trading-post/updateitem/" + item._id}>Update Item</a></td> */}
                                 <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={() => props.updateUserItem(UserId, item._id)}>Update Item</button></td>
                                 <td><button className="waves-effect waves-light btn-small" style={{fontSize: 9}} onClick={() => props.deleteUserItem(UserId, item._id)}>Delete Item</button></td>

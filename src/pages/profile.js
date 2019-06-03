@@ -21,7 +21,7 @@ class Profile extends Component {
     state: "",
     phone: "",
     bio: "",
-    profilePic: "",
+    profilePic: "https://www.sccpre.cat/mypng/detail/26-268559_profile-picture-placeholder-round.png",
     items: [],
     wishlist: [],
     searchTerm: "",
@@ -78,7 +78,7 @@ class Profile extends Component {
   loadUser = id => {
     API.getUserInfo(id).then(
       res => {
-        console.log(res.data);
+        let pic = res.data.profilePic ? res.data.profilePic : "https://www.sccpre.cat/mypng/detail/26-268559_profile-picture-placeholder-round.png";
         this.setState({
           isLoaded: true,
           error: null,
@@ -93,7 +93,7 @@ class Profile extends Component {
           wishlist: res.data.wishlist,
           searchterm: res.data.searchTerm,
           bio: res.data.bio,
-          profilePic: res.data.profilePic
+          profilePic: pic 
         });
       },
       error => {

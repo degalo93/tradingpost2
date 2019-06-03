@@ -2,7 +2,36 @@ import React, { Component } from "react";
 import { Container } from '../components/Grid';
 import API from "../utils/API";
 import styles from '../components/Postform/style.css';
-import SearchCategory from "../components/SearchCategory";
+//import SearchCategory from "../components/SearchCategory";
+import Select from 'react-select';
+
+
+const options = [
+  { label: "General", value: "General" },
+  { label: "Books", value: 'Books' },
+  { label: "Electronics", value: "Electronics" },
+  { label: "Jewelry", value: "Jewelry" },
+  { label: "Tools", value: "Tools" },
+  { label: "Clothing", value: "Clothing" },
+  { label: "Furniture", value: "Furniture" },
+  { label: "Games", value: "Games" },
+  { label: "Sports Equipment", value: "Sports Equipment" },
+  { label: "Appliances", value: "Appliances" },
+ 
+ ];
+ const colourStyles = {
+  control: styles => ({ ...styles, backgroundColor: 'white', outline: 'none', position: 'relative',
+  cursor: 'pointer', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #9e9e9e', height: '3rem', outline: 'none',
+  lineHeight: '3rem, width: 100%', fontSize: '16px', margin: '0 0 8px 0', padding: 0, userSelect: 'none'}),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: 'white',
+      color: '#757575',
+      cursor: isDisabled ? 'not-allowed' : 'default',
+    };
+  },
+};
 
 
 
@@ -21,6 +50,7 @@ class PostItem extends Component {
     description: "",
     selectedCategory: "General",
     condition: "",
+    selectedOption: { label: "General", value: "General"}
   };
 
 
@@ -44,12 +74,16 @@ class PostItem extends Component {
                 <option key={category.name}>{category.name}</option>) */
    
   } 
-
+//handleing change on category 
+handleChange = selectedOption => {
+  this.setState({ selectedOption });
+  console.log(`Option selected:`, selectedOption);
+};
 
   //form submit event handler
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.selectedCategory);
+    console.log(this.state.selectedOption.value);
 
     API.createNewItem(
      /*  sessionStorage.getItem("UserId"), */
@@ -59,7 +93,7 @@ class PostItem extends Component {
         title: this.state.title,
         picture: this.state.picture.length === 0 ? "https://www.pluggedin.com/images/content-image/placeholder_book.jpg" : this.state.picture,
         description: this.state.description,
-        category: this.state.selectedCategory,
+        category: this.state.selectedOption.value,
         condition: this.state.condition
       }).then(res => {
         console.log("The item was posted " + res.data);
@@ -76,6 +110,8 @@ class PostItem extends Component {
 
 
   render() {
+
+    const { selectedOption } = this.state;
     return (
 
       <Container>
@@ -94,12 +130,13 @@ class PostItem extends Component {
 
               <div className="input-field col s6">
                 <div>
-                <SearchCategory/>
-                  {/* <select className="select-dropdown"  value={this.state.selectedCategory} id="dropdown"
-                    onChange={(e) => this.setState({ selectedCategory: e.target.value })}>
-                  {this.state.categories.map((category) => <option key={category} value={category}>{category}</option>)}
-              
-                  </select> */}
+                <Select
+              defaultValue={options[0]}
+              styles={colourStyles}
+               value={selectedOption}
+              onChange={this.handleChange}
+              options={options}
+               />
                 </div>
               </div>
             </div>

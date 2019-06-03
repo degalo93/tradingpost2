@@ -15,6 +15,8 @@ const buttonStyle = {
   margin: "2px, 2px, 10px, 2px"
 };
 
+
+
 function ItemCard(props) {
   console.log("ItemCard props " + props);
  //console.log("ItemCard user " + props.currentUser.isAuthenticated);
@@ -62,13 +64,20 @@ function ItemCard(props) {
                     <Row>
                       <Col size="s10 offset-s1">
                      {/*  {props.currentUser.isAuthenticated ? (  */}
-                        <Link
-                          to="#emailForm"
-                          className="btn green modal-trigger"
+                      <form
+            action={"mailto: testEmail@gmail.com"}
+            method="post"
+            enctype="text/plain"
+          >
+                        <button
+                          
+                          className="btn green waves-effect waves-light"
+                          type="submit"
                           style={buttonStyle}
                         >
                           Email this user!
-                        </Link>
+                        </button>
+                        </form>
                     {/*   ) : (
                         <div></div>
                       )} */}
@@ -100,8 +109,8 @@ function ItemCard(props) {
             />
             <br />
             <br />
-            <input type="submit" value="Send" />
-            <input type="reset" value="Reset" />
+            <input className="btn waves-effect waves-light teal lighten-1" type="submit" value="Send" />
+            <input className="btn waves-effect waves-light teal lighten-1" type="reset" value="Reset" />
           </form>
         </div>
       </div>

@@ -13,7 +13,7 @@ class Navbar extends Component {
     return (
       <div>
         <nav className="nav-wrapper cyan darken-3">
-          <ul class="left">
+          <ul className="left">
             <li>
               <Link to="/" className="nav-pic-link">
                 <img className="nav-pic" src="/Logo.png" alt="Trading-Post" />
@@ -33,7 +33,7 @@ class Navbar extends Component {
                   className="inline-flex"
                   to={`/profile/${this.props.currentUser.user._id}`}
                 >
-                  <i className="material-icons prefix">account_circle</i>
+                  <i className="material-icons prefix navbar-icon">account_circle</i>
                   Profile
                 </Link>
               </li>

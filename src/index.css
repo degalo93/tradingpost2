@@ -20,6 +20,12 @@
     font-size: 22px;
 }
 
+.navbar-icon {
+    vertical-align: middle;
+    margin-right: 3px;
+    padding-top: 5px;
+}
+
 .tp-link {
     padding-left: 5px !important;
 }

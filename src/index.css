@@ -6,31 +6,29 @@
     font-weight: bold;
 }
 
-.nav-pic{
+.nav-pic {
     height: 30px;
     width: 30px;
     vertical-align: middle;
 }
 
-.nav-pic-link{
+.nav-pic-link {
     padding-right: 0px !important;
 }
 
-.navbar-title{
-    font-size:22px;
+.navbar-title {
+    font-size: 22px;
 }
 
-.tp-link{
+.tp-link {
     padding-left: 5px !important;
 }
-
 
 .navbar a:hover {
     color: lightgrey;
     text-decoration: underline;
     cursor: pointer;
 }
-
 
 .home-landing {
     width: 100vw;
@@ -41,7 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     /* justify-content: center; */
     z-index: -1;
     background-image: url("/placeholder.jpg");
@@ -50,13 +47,13 @@
     margin-top: 2rem;
     background-position: center center;
     background-size: cover;
-    
 }
 
-.section-title{
+.section-title {
     color: #ffffff;
     text-shadow: 0 0 2px #272020;
 }
+
 .feature-title {
     color: #301515;
 }
@@ -86,24 +83,22 @@
     color: rgb(230, 230, 230);
 }
 
-
 .homeCard {
     height: 250px;
-    
 }
 
 .btn {
     margin: 5px;
 }
 
-.item-image{
+.item-image {
     height: 200px !important;
     width: 100% !important;
     display: block !important;
     margin: auto !important;
 }
 
-.item-title{
+.item-title {
     font-size: 22px;
     position: absolute;
     bottom: 0;
@@ -118,16 +113,16 @@
     background-color: #26a69a;
 }
 
-.post-btn{
+.post-btn {
     vertical-align: middle;
     margin-top: 3rem;
 }
 
-.inline-flex{
+.inline-flex {
     display: inline-flex !important;
 }
 
-.search-form{
+.search-form {
     margin-top: 30px;
 }
 
@@ -145,19 +140,26 @@ body {
 .css-1okebmr-indicatorSeparator {
     background-color: white !important;
     color: white;
- }
-
+    opacity: 0;
+}
 
 .css-1uccc91-singleValue {
-  color: #999999 !important;
+    color: #999999 !important;
+    position: relative !important;
+    font-size: 15px;
 }
 
 .css-mnzrfz-control {
     outline: none;
     border: 0;
     box-shadow: white;
-   /*  border-color: white !important; 
+    /*  border-color: white !important; 
     border-bottom: 1px solid #999999; */
+}
+
+.css-2b097c-container:focus {
+    box-shadow: none !important;
+    outline: none;
 }
 
 

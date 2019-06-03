@@ -83,7 +83,7 @@ class Landing extends Component {
         </div>
         <div>
           <CardRow
-            items={this.state.returnedItems} />
+            items={this.state.returnedItems} currentUser={this.props.currentUser} />
           {/*  <Postform></Postform>  */}
         </div>
         </div>

@@ -20,6 +20,7 @@ function CardRow(props) {
                         owner = {item._owner._id}
                         nick = {item._owner.userName}
                         category = {item.category}
+                        currentUser = {props.currentUser}
 
                     />
                 ))}

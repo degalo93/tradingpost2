@@ -23,7 +23,7 @@ const content = {
 };
 
 function Card(props) {
-  console.log("Inside Card ownerid" + props.owner + " id " + props.id);
+  console.log("Inside Card ownerid" + props.owner + " id " + props.id + " nick " + props.nick + " desc " + props.description);
   return (
     <div>
       <Col size="col l4 m6 s12">
@@ -50,7 +50,17 @@ function Card(props) {
                   className="card-action btn text-center teal lighten-1"
                   style={buttonStyle}
                   /* to={`/item/${props.id}`} */
-                  to={`/item/${props.owner}/${props.id}`} 
+                  to={ { pathname:`/item/${props.owner}/${props.id}`, 
+                  state: {
+                    nick: props.nick,
+                    description: props.description,
+                    email: props.email,
+                    title: props.title,
+                    condition: props.condition,
+                    picture: props.image
+                  }
+                
+                } }
                 >
                   Details
                 </Link>

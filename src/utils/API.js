@@ -26,8 +26,8 @@ export default {
     },
     //get request to receive items based on the category and the search term
     getSearchedItems: function (category, searchTerm) {
-        console.log("category: " + category);
-        console.log("searchTerm: " + searchTerm);
+       /*  console.log("category: " + category);
+        console.log("searchTerm: " + searchTerm); */
        return axios.get("https://tradingpost-server-hz.herokuapp.com/api/search/" + category + "/" + searchTerm);
     },
     //get request for update an item form

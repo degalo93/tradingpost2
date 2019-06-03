@@ -3,7 +3,7 @@ import Card from "../Cards/index"
 
 
 function CardRow(props) {
-    console.log("PROPS: ", props)
+    console.log("CardRow PROPS: ", props)
     return (
         <div>
 
@@ -18,6 +18,7 @@ function CardRow(props) {
                         key={item._id}
                         condition = {item.condition}
                         owner = {item._owner._id}
+                        nick = {item._owner.userName}
                         category = {item.category}
 
                     />

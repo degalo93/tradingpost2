@@ -12,7 +12,7 @@ class Landing extends Component {
     searchTerm: "",
     pg: "Landing",
     selectedCategory: "General",
-    //categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
+    categories: ['General', 'Books', 'Electronics', 'Jewelry', 'Tools', 'Clothing', 'Furniture', 'Games', 'Sports Equipment', 'Appliances']
   };
 
   handleInputChange = event => {
@@ -30,7 +30,7 @@ class Landing extends Component {
     API.getSearchedItems(this.state.selectedCategory, this.state.searchTerm)
     .then(res => {
       console.log(res.data);
-      console.log("landing: " + res.data.items.length);
+      //console.log("landing: " + res.data.items.length);
       this.setState({ returnedItems: res.data, searchTerm: "" });     
     })
   };

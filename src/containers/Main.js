@@ -17,7 +17,7 @@ const Main = props => {
     <div className="container">
       <Switch>
         <Route exact path="/" render={props => <Homepage currentUser={currentUser} {...props} />} />
-        <Route exact path="/search" component={Landing} />
+        <Route exact path="/search" render={props => <Landing currentUser={currentUser} {...props} />} />
         <Route path="/profile/:id" render={props => <Profile currentUser={currentUser} {...props} />} />
         <Route exact path="/postitem/:id" component={PostItem} />
         <Route exact path="/updateitem/:userid/:itemid" component={UpdateItem} />

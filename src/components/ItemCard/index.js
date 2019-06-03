@@ -16,6 +16,8 @@ const buttonStyle = {
 };
 
 function ItemCard(props) {
+  console.log("ItemCard props " + props);
+ //console.log("ItemCard user " + props.currentUser.isAuthenticated);
   return (
     <Container>
       <div className="col s10 z-depth-4">
@@ -59,6 +61,7 @@ function ItemCard(props) {
                     </Row>
                     <Row>
                       <Col size="s10 offset-s1">
+                     {/*  {props.currentUser.isAuthenticated ? (  */}
                         <Link
                           to="#emailForm"
                           className="btn green modal-trigger"
@@ -66,6 +69,9 @@ function ItemCard(props) {
                         >
                           Email this user!
                         </Link>
+                    {/*   ) : (
+                        <div></div>
+                      )} */}
                       </Col>
                     </Row>
                   </Col>

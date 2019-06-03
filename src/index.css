@@ -26,8 +26,9 @@
     padding-top: 5px;
 }
 
-input.waves-button-input {
-    color: white;
+.item-section-title{
+    margin-left: 0px;
+    padding-left:20px;
 }
 
 .tp-link {
@@ -91,6 +92,10 @@ input.waves-button-input {
 .cardContent {
     padding: 1.5rem;
     color: rgb(230, 230, 230);
+}
+
+.card-content {
+    padding-bottom: 0px !important;
 }
 
 .homeCard {

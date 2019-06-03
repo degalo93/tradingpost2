@@ -9,28 +9,32 @@ import { isTSTypeParameterDeclaration } from '@babel/types';
 class ItemPage extends Component {
 
     state = {
-        id: "",
+        //id: "",
         picture: "",
         title: "",
         description: "",
         condition: "",
-        ownerID: "",
-        ownerEmail: "",
-        nick: ""
+        //ownerID: "",
+        email: "",
+        nick: "",
+        currentUser: null
+
     };
  
    
 
     componentDidMount() {
         const { userid, itemid } = this.props.match.params;
-        const {description, nick, title, condition, picture, email } = this.props.location.state;
+        const {description, nick, title, condition, picture, email, currentUser } = this.props.location.state;
         this.setState({
             description,
             nick,
             title,
             condition,
             picture,
-            email
+            email,
+            currentUser
+
         });
        
         //this.getItem( userid, itemid );
@@ -67,6 +71,7 @@ class ItemPage extends Component {
                 title={this.state.title}
                 description={this.state.description}
                 condition={this.state.condition}
+                currentUser = {this.state.currentUser}
                 ownerEmail={this.state.email} />
         )
     }

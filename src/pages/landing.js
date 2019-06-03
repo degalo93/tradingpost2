@@ -3,6 +3,7 @@ import CardRow from '../components/CardRow'
 import API from "../utils/API";
 import { SearchBtn } from "../components/SearchBtn";
 import SearchCategory from "../components/SearchCategory";
+import { connect } from "react-redux";
 
 
 class Landing extends Component {
@@ -95,4 +96,15 @@ class Landing extends Component {
 
 }
 
-export default Landing;
+
+function mapStateToProps(state) {
+  return {
+    currentUser: state.currentUser
+  };
+}
+
+export default connect(
+  mapStateToProps
+)(Landing);
+
+/* export default Landing; */

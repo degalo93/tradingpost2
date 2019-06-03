@@ -23,7 +23,6 @@ const content = {
 };
 
 function Card(props) {
-  //console.log("Inside Card " + props.currentUser.isAuthenticated);
   return (
     <div>
       <Col size="col l4 m6 s12">
@@ -45,10 +44,9 @@ function Card(props) {
           <div>
             <p className="truncate">{props.description}</p>
             <Row>
-           {/*  {props.currentUser.isAuthenticated ? ( */}
-              <Col size="col s2 offset-s6">
-            
 
+              <Col size="col s2 offset-s6">
+             {props.currentUser.isAuthenticated ? ( 
                 <Link
                          className="card-action btn text-center teal lighten-1"
                          style={buttonStyle}
@@ -59,16 +57,15 @@ function Card(props) {
                            email: props.email,
                            title: props.title,
                            condition: props.condition,
-                           picture: props.image
-                         }
-                      
+                           picture: props.image,
+                           currentUser: props.currentUser
+                         }                    
                        } }> Details
-                </Link>
-               
-       
+                </Link>  
+                ) : (
+                        <div></div>
+                    )}    
               </Col>
-              {/*    ) : ( <div></div>
-                    )} */}
             </Row>
           </div>
         </BasicCard>

@@ -3,12 +3,21 @@ import { Link } from "react-router-dom";
 import BasicCard from "./BasicCard";
 import { Container, Row, Col } from "../components/Grid";
 import Landing from "../pages/landing";
+//import { url } from "inspector";
+
+
+
 
 const Homepage = ({currentUser}) => {
- 
+
+  const divStyle = {
+    backgroundImage: `url(placeholder.jpg)`,
+   };
+
+
  if(!currentUser.isAuthenticated) { 
     return ( 
-      <div className="home-landing">
+      <div className="home-landing" style = {divStyle} >
     <h2 className="section-title">Trading Post</h2>
     <Container>
       <Row>

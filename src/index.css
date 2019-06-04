@@ -52,8 +52,9 @@
     align-items: center;
     /* justify-content: center; */
     z-index: -1;
-    background-image: url("https://imgur.com/ur5w59j");
+    /*  background-image: url("/* https://imgur.com/ur5w59j */
     text-align: center;
+    background-image: url("https://degalo93.github.io/tradingpost2");
     /* padding-top: 1rem; */
     margin-top: 2rem;
     background-position: center center;

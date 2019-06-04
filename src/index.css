@@ -26,9 +26,9 @@
     padding-top: 5px;
 }
 
-.item-section-title{
+.item-section-title {
     margin-left: 0px;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .tp-link {
@@ -52,7 +52,7 @@
     align-items: center;
     /* justify-content: center; */
     z-index: -1;
-    background-image: url("/placeholder.jpg");
+    background-image: url("https://imgur.com/ur5w59j");
     text-align: center;
     /* padding-top: 1rem; */
     margin-top: 2rem;
@@ -106,14 +106,11 @@
     margin: 5px;
 }
 
-.card .card-image img{
-    width:auto;
+.card .card-image img {
+    width: auto;
 }
 
-.profile-pic-div{
-    
-}
-
+.profile-pic-div {}
 
 .item-image {
     height: 200px !important;

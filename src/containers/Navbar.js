@@ -16,7 +16,7 @@ class Navbar extends Component {
           <ul className="left">
             <li>
               <Link to="/" className="nav-pic-link">
-                <img className="nav-pic" src="/Logo.png" alt="Trading-Post" />
+                <img className="nav-pic" src="./Logo.png" alt="Trading-Post" />
               </Link>
             </li>
             <li>

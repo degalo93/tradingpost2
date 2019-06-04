@@ -130,6 +130,7 @@ class Profile extends Component {
           <br />
           <div className="row">
             <div className="container">
+              <div className="profile-pic-div">
               <div className="col s4">
                 <img
                   src={this.state.profilePic}
@@ -138,7 +139,8 @@ class Profile extends Component {
                   alt="Profile Pic"
                 />
               </div>
-              <div className="col s7">
+              </div>
+              <div className="col s7 offset-s1">
                 <h3 className="left-align inline-flex">
                   {this.state.userName}
                 </h3>

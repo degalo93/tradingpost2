@@ -20,14 +20,12 @@ export default {
     users: function () {
         return axios.get("https://trading-post-server.herokuapp.com/api/auth/users")
     }, */
-
+    //a request to get users info for the profile page
     getUserInfo: function (userid) {
        return axios.get("https://tradingpost-server-hz.herokuapp.com/api/users/" + userid);
     },
     //get request to receive items based on the category and the search term
     getSearchedItems: function (category, searchTerm) {
-       /*  console.log("category: " + category);
-        console.log("searchTerm: " + searchTerm); */
        return axios.get("https://tradingpost-server-hz.herokuapp.com/api/search/" + category + "/" + searchTerm);
     },
     //get request for update an item form
@@ -38,12 +36,8 @@ export default {
     updateExistingItem: function (userid, itemid, postData) {
         return axios.put(`https://tradingpost-server-hz.herokuapp.com/api/items/${userid}/item/${itemid}`, postData)
     },
-   /*  getItemData: function (itemId) {
-        return axios.get("https://trading-post-server.herokuapp.com/api/items/single/" + itemId)
-   }, */
+    //delete an item posted by a user
     deleteItem: function(userId, itemId) {
-        console.log(userId);
-        console.log(itemId);
         return axios.delete(`https://tradingpost-server-hz.herokuapp.com/api/items/${userId}/item/${itemId}`);
     } 
 

@@ -47,7 +47,6 @@ function Card(props) {
 
               <Col size="s2 offset-s6">
              {props.currentUser.isAuthenticated ? ( 
-
                 <Link
                          className="card-action btn waves-effect waves-light text-center teal lighten-1"
                          style={buttonStyle}

@@ -72,7 +72,7 @@ class Profile extends Component {
     console.log("id " + id);
     this.setState._id = id;
     this.loadUser(id);
-    //this.loadUser(id, (id) => { this.setState._id = id }); ???
+    
   }
 
   loadUser = id => {
@@ -100,7 +100,7 @@ class Profile extends Component {
         this.setState({ isLoaded: true, error });
       }
     );
-    //.catch(err => console.log(err));
+    
   };
 
   //method to delete an item
@@ -115,9 +115,7 @@ class Profile extends Component {
   updateUserItem = (userId, itemId) => {
     console.log("To update Item");
     let path = "/updateitem/" + this.state._id + "/" + itemId;
-    console.log(path);
     this.props.history.push("/updateitem/" + this.state._id + "/" + itemId);
-    //return <Redirect to={path}/>
   };
 
   routeChangeAddItem = () => {
@@ -126,7 +124,6 @@ class Profile extends Component {
   };
 
   render() {
-    /* console.log(this.state) */
     if (this.props.currentUser.isAuthenticated) {
       return (
         <div>
@@ -158,12 +155,6 @@ class Profile extends Component {
               </div>
             </div>
           </div>
-          {/* <ProfileTop
-            image={this.state.profilePic}
-            username={this.state.userName}
-            description={this.state.bio}
-          /> */}
-
           <Row>
             <List
               listTitle="Posts"

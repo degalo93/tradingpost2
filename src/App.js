@@ -49,8 +49,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/trading-post/" component={landing} />
-           {/*  <Route exact path="/trading-post/signin" component={signin} />
-            <Route exact path="/trading-post/signup" component={signup} /> */}
             <Route exact path="/trading-post/postitem/:id" component={postitem} />
             <Route exact path="/trading-post/updateitem/:id" component={updateitem} />
             <Route path="/trading-post/item/:id" component={item} />

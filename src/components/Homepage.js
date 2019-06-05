@@ -11,7 +11,7 @@ import Landing from "../pages/landing";
 const Homepage = ({currentUser}) => {
 
   const divStyle = {
-    backgroundImage: `url(https://degalo93.github.io/tradingpost2/public/placeholder.jpg)`,
+    backgroundImage: `url(https://degalo93.github.io/tradingpost2/placeholder.jpg)`,
    };
 
 

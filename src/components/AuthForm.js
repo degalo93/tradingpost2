@@ -24,7 +24,7 @@ import PropTypes from "prop-types";
     this.props
       .onAuth(authType, this.state)
       .then(() => {
-        this.props.history.push("/");
+        this.props.history.push("/tradingpost2");
       })
       .catch(() => {
         return;

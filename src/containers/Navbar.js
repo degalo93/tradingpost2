@@ -15,12 +15,12 @@ class Navbar extends Component {
         <nav className="nav-wrapper cyan darken-3">
           <ul className="left">
             <li>
-              <Link to="/" className="nav-pic-link">
+              <Link to="/tradingpost2" className="nav-pic-link">
                 <img className="nav-pic" src="./Logo.png" alt="Trading-Post" />
               </Link>
             </li>
             <li>
-              <Link to="/" className="tp-link">
+              <Link to="/tradingpost2" className="tp-link">
               <span className="navbar-title inline-flex">Trading Post</span>
               </Link>
             </li>

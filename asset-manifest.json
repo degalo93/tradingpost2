@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tradingpost2/static/css/main.b8dca709.chunk.css",
-    "main.js": "/tradingpost2/static/js/main.b7e83a87.chunk.js",
-    "main.js.map": "/tradingpost2/static/js/main.b7e83a87.chunk.js.map",
+    "main.js": "/tradingpost2/static/js/main.07e46509.chunk.js",
+    "main.js.map": "/tradingpost2/static/js/main.07e46509.chunk.js.map",
     "runtime~main.js": "/tradingpost2/static/js/runtime~main.fc807996.js",
     "runtime~main.js.map": "/tradingpost2/static/js/runtime~main.fc807996.js.map",
     "static/js/2.b76d8686.chunk.js": "/tradingpost2/static/js/2.b76d8686.chunk.js",
     "static/js/2.b76d8686.chunk.js.map": "/tradingpost2/static/js/2.b76d8686.chunk.js.map",
     "index.html": "/tradingpost2/index.html",
-    "precache-manifest.23b12a1ed0d603ec49b230466f30c2f2.js": "/tradingpost2/precache-manifest.23b12a1ed0d603ec49b230466f30c2f2.js",
+    "precache-manifest.f9f22036019f2f31d5613dd66373e6f1.js": "/tradingpost2/precache-manifest.f9f22036019f2f31d5613dd66373e6f1.js",
     "service-worker.js": "/tradingpost2/service-worker.js",
     "static/css/main.b8dca709.chunk.css.map": "/tradingpost2/static/css/main.b8dca709.chunk.css.map"
   }

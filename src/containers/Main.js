@@ -10,6 +10,7 @@ import Profile from "../pages/profile";
 import UpdateItem from "../pages/updateitem";
 import PostItem from "../pages/postitem";
 import ItemPage from "../pages/item"
+import NoMatch from "../pages/noMatch";
  
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props; 
@@ -55,6 +56,7 @@ const Main = props => {
             );
           }}
         /> 
+        <Route component= {NoMatch} />
       </Switch>
     </div>
   );

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
 
+//This navbar conditionally renders information based on if the user is logged in or not.
+
 class Navbar extends Component {
   logout = e => {
     e.preventDefault();

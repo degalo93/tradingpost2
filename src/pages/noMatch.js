@@ -10,9 +10,12 @@ const imgStyle={
 
 const divStyle={
   width: "100%",
-  height:"680px",
+  height:"100%",
+  margin: "auto",
   backgroundColor: "Black",
 }
+
+//this page will display anytime a route is not found, will display 404 page not found
 
 function noMatch() {
   return (

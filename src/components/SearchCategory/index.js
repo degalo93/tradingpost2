@@ -27,7 +27,7 @@ export default SearchCategory; */
 import React from 'react';
 import Select from 'react-select';
 
-
+//All categories for the dropdown menu, for search functionality
 const categories = [
  { label: "General", value: "General" },
  { label: "Books", value: 'Books' },

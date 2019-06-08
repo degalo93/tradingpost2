@@ -1,6 +1,4 @@
 import React from "react";
-import style from "./style.css";
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "../Grid";
 
 const imageStyle = {
@@ -15,7 +13,7 @@ const buttonStyle = {
   margin: "2px, 2px, 10px, 2px"
 };
 
-
+//This component renders the details of a specific item, handed down through props
 
 function ItemCard(props) {
   console.log("ItemCard props " + props);

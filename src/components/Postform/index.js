@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "../Grid";
 
+//This is our form for posting items 
+
 export default class PostForm extends React.Component {
     state = {
        title: " ",

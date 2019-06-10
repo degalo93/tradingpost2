@@ -1,6 +1,6 @@
 # Trading Post
 
-[Deployed Link](https://github.com/degalo93/tradingpost2)
+[Deployed Link](https://degalo93.github.io/tradingpost2/)
 
 [Server Back-end](https://github.com/Haldevel/trading-post-backend) 
 
@@ -26,34 +26,7 @@ Landing Page |
 
 Search Page |
 :------------------:
-![Search Page](./public/images/searchpg.PNG) |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Search Page](./public/images/searchnew.PNG) |
 
 
 
@@ -67,62 +40,27 @@ profile picture, the items posted for exchange by a user and her wishlist. A use
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Important Code Details
 
-Search  |
+Forms  |
 :------------------:
-![Search](./images/search.PNG) |
+![Forms](./public/images/Authform.gif) |
 
-Listing item|
-:------------------:
-![Listing Item](./images/search.PNG) |
+The forms are conditionally rendered where if the person clicks sign up or sign in the form will changed based off of user input. 
 
-Server side |
+
+Posting Items  |
 :------------------:
-![Server Item](./images/search.PNG) |
+![Items](./public/images/postitem.gif) |
+
+
+For posting items we made the process easy for users to post the item that they want to trade. They have the option to edit the item or delete the post completely as soon as the user has traded it.
+
+
+Server Side  |
+:------------------:
 
 The database contains four models: Person, Item, Wishlist, and Category. The API routes are protected using JWT middleware. To access routes such as profile, or to add, or update, or delete items, a user has to be logged in and authenticated.  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,14 +80,5 @@ Technologies Used |
 * cors
 * Redux
 * React-Redux
+* Axios
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

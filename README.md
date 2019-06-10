@@ -1,6 +1,6 @@
 # Trading Post
 
-[Deployed Link](https://github.com/degalo93/tradingpost2)
+[Deployed Link](https://degalo93.github.io/tradingpost2/)
 
 [Server Back-end](https://github.com/Haldevel/trading-post-backend) 
 
@@ -97,18 +97,19 @@ Profile |
 
 ## Important Code Details
 
-Search  |
+Forms  |
 :------------------:
-![Search](./images/search.PNG) |
+![Forms](./public/images/Authform.gif) |
 
-Listing item|
+The forms are conditionally rendered where if the person clicks sign up or sign in the form will changed based off of user input. 
+
+
+Posting Items  |
 :------------------:
-![Listing Item](./images/search.PNG) |
+![Items](./public/images/postitem.gif) |
 
-Server side |
-:------------------:
-![Server Item](./images/search.PNG) |
 
+For posting items we made the process easy for users to post the item that they want to trade. They have the option to edit the item or delete the post completely as soon as the user has traded it.
 
 
 
@@ -139,14 +140,3 @@ Technologies Used |
 * cors
 * redux
 * Redux-react
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

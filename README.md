@@ -26,7 +26,7 @@ Landing Page |
 
 Search Page |
 :------------------:
-![Search Page](./public/images/searchpg.PNG) |
+![Search Page](./public/images/searchnew.PNG) |
 
 
 
@@ -80,4 +80,5 @@ Technologies Used |
 * cors
 * Redux
 * React-Redux
+* Axios
 

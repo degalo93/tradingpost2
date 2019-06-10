@@ -29,9 +29,70 @@ Search Page |
 ![Search Page](./public/images/searchpg.PNG) |
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Profile |
 :------------------:
 ![Profile ](./public/images/profile.PNG) |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Important Code Details
@@ -47,6 +108,22 @@ Listing item|
 Server side |
 :------------------:
 ![Server Item](./images/search.PNG) |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

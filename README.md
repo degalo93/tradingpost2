@@ -1,6 +1,8 @@
 # Trading Post
 
-[Deployed Link]()
+[Deployed Link](https://github.com/degalo93/tradingpost2)
+
+[Server Back-end](https://github.com/Haldevel/trading-post-backend) 
 
 Collaborators |
 :---------:

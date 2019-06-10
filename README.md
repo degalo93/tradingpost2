@@ -10,24 +10,26 @@ Collaborators |
 
 
 ## Description
-### This is a web application designed to help users to trade goods with each other without currency.
+### An Craiglist inspired decoupled MERN app made with React and Redux, that uses its own JWT tokens for security and authorization of users. This app encourages the exchange of goods without currency.
 
 ### For this app we choose to follow a decouple architecture. A decoupled architecture is a framework for complex work that allows components to remain completely autonomous and unaware of each other. This allows for a clear process in where both front and backend can work succinctly to make a fully functional app.
 
+### 
+
 ## Screenshots/GIFS
+
+Landing Page |
+:------------------:
+![Landing Page](./public/images/landing.PNG) |
 
 Search Page |
 :------------------:
-![Search Page]() |
+![Search Page](./public/images/searchpg.PNG) |
 
-Save Page |
+
+Profile |
 :------------------:
-![Save Page](./images/savedpage.PNG) |
-
-
-404 Error |
-:------------------:
-![error Page](./images/404error.PNG) |
+![Profile ](./public/images/profile.PNG) |
 
 
 ## Important Code Details
@@ -56,6 +58,8 @@ Technologies Used |
 * Mongo
 * express
 * cors
+* redux
+* Redux-react
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

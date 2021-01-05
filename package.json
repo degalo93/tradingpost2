@@ -5,7 +5,7 @@
     "homepage": "https://degalo93.github.io/tradingpost2/",
     "dependencies": {
         "auth0-js": "^9.10.2",
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "jquery": "^3.4.1",
         "jwt-decode": "^2.2.0",
         "moment": "^2.24.0",
